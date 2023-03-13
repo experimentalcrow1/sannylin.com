@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <title>Hacked by Aliester Crowley</title>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=us-ascii">
+    <link href="https://fonts.googleapis.com/css?family=Almendra+Display|Almendra+SC|Piedra&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.10.2.min.js.download"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+      if (document.all || document.getElementById) {
+        var thetitle = document.title
+        document.title = ''
+      }
+      var data = "01";
+      var done = 1;
+
+      function statusIn(text) {
+        decrypt(text, 3, 40);
+      }
+
+      function statusOut() {
+        self.status = '';
+        done = 1;
+      }
+
+      function decrypt(text, max, delay) {
+        if (done) {
+          done = 0;
+          rantit(text, max, delay, 0, max);
+        }
+      }
+
+      function rantit(text, runs_left, delay, charvar, max) {
+        if (!done) {
+          runs_left = runs_left - 1;
+          var status = text.substring(0, charvar);
+          for (var current_char = charvar; current_char < text.length; current_char++) {
+            status += data.charAt(Math.round(Math.random() * data.length));
+          }
+          document.title = status;
+          var rerun = "rantit('" + text + "'," + runs_left + "," + delay + "," + charvar + "," + max + ");"
+          var new_char = charvar + 1;
+          var next_char = "rantit('" + text + "'," + max + "," + delay + "," + new_char + "," + max + ");"
+          if (runs_left > 0) {
+            setTimeout(rerun, delay);
+          } else {
+            if (charvar < text.length) {
+              setTimeout(next_char, Math.round(delay * (charvar + 3) / (charvar + 1)));
+            } else {
+              done = 1;
+            }
+          }
+        }
+      }
+      if (document.all || document.getElementById) statusIn(thetitle)
+    </script>
+    <style>
+      body {
+	    background: black;
+	    overflow: hidden;
+        cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur862.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur862.png), progress !important
+      }
+      h1 {
+        font-family: "AlmendraDisplay";
+        color: #ff0
+      }
+
+      h3 {
+        font-size: 25px;
+        font-family: courier;
+        font-weight: normal
+      }
+
+      h3 {
+        color: transparent;
+        animation: x 0.5s linear infinite
+      }
+
+      @keyframes x {
+        0% {
+          color: green
+        }
+
+        25% {
+          color: yellow
+        }
+
+        50% {
+          color: red
+        }
+
+        75% {
+          color: blue
+        }
+
+        100% {
+          color: white
+        }
+      }
+
+      .glow-on-hover {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+      }
+
+      .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+      }
+
+      .glow-on-hover:active {
+        color: #000
+      }
+
+      .glow-on-hover:active:after {
+        background: transparent;
+      }
+
+      .glow-on-hover:hover:before {
+        opacity: 1;
+      }
+
+      .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+      }
+
+      @keyframes glowing {
+        0% {
+          background-position: 0 0;
+        }
+
+        50% {
+          background-position: 400% 0;
+        }
+
+        100% {
+          background-position: 0 0;
+      }
+      }
+    </style>
+  </head>
+  <body>
+  <center>
+		<img src="https://4.bp.blogspot.com/-ceQOU8yDA-s/VI0BYisVOHI/AAAAAAAAEdc/ANKuBTJqxHM/s1600/agne_zps5e42fcf5.png" height="400" align="middle" border="0"\><br>
+		<script>
+			function farbschrift(){for(var F=0;F<Buchstabe.length;F++)document.all["a"+F].style.color=farben[F];farbverlauf()}function string2array(F){for(Buchstabe=new Array;farben.length<F.length;)farben=farben.concat(farben);for(k=0;k<=F.length;)Buchstabe[k]=F.charAt(k),k++}function divserzeugen(){for(var F=0;F<Buchstabe.length;F++)document.write("<font face='Courier' size='90'><span id='a"+F+"' class='a"+F+"'>"+Buchstabe[F]+"</span></font>");farbschrift()}function farbverlauf(){for(var F=0;F<farben.length;F++)farben[F-1]=farben[F];farben[farben.length-1]=farben[-1],setTimeout("farbschrift()",30)}function farbtauscher(){for(farben=farbbibliothek[farbsatz];farben.length<text.length;)farben=farben.concat(farben);farbsatz=Math.floor(Math.random()*(farbbibliothek.length-1e-4))}farbbibliothek=new Array,farbbibliothek[0]=new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"),farbbibliothek[1]=new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"),farbbibliothek[2]=new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"),farbbibliothek[3]=new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"),farbbibliothek[4]=new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"),farbbibliothek[5]=new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"),farbbibliothek[6]=new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040"),farben=farbbibliothek[4];var a=1,farbsatz=1;setInterval("farbtauscher()",5e3),text="Hacked by Aliester Crowley",string2array(text),divserzeugen(),startTyping(text,70,"textDestination");
+		</script>
+		<br>
+		<h3>Update your security! Greetings from the Maldives...</h3>
+                <a href="https://www.youtube.com/AliesterCrowleyMV">
+                <button class="glow-on-hover" type="button">Find me on YouTube <i class="fa fa-youtube-play"></i></button></a> 
+                <br>
+		<br>
+		<img src="https://i.ibb.co/ynRxWyb/egbzgh-jpg.gif" align="middle" border="0" alt="egbzgh-jpg">
+	</center>
+	<audio autoplay="" src="https://ia801402.us.archive.org/3/items/y-2mate.com-apashe-im-a-dragon-vip/y2mate.com%20-%20Apashe%20%20Im%20A%20Dragon%20VIP.mp3" type="audio/mpeg"></audio>
+</body>
+</html>
